@@ -1,10 +1,10 @@
 def buildapp(){
   echo 'build successfull"
 }
-def test(){
+def testApp(){
   echo "test successfull"
 }
-def deploy(){
+def deployApp(){
   echo "deploy successfull"
   echo "deploy version ${params.version}"
 }
