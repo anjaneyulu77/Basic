@@ -1,11 +1,14 @@
-def buildApp(){
-  echo 'build successfull"
-}
-def testApp(){
-  echo "test successfull"
-}
-def deployApp(){
-  echo "deploy successfull"
-  echo "deploy version ${params.version}"
-}
+def buildApp() {
+    echo 'building the application...'
+} 
+
+def testApp() {
+    echo 'testing the application...'
+} 
+
+def deployApp() {
+    echo 'deplying the application...'
+    echo "deploying version ${params.version}"
+} 
+
 return this
