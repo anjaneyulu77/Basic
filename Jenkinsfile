@@ -4,7 +4,7 @@ pipeline{
     stage('build'){
       when{
         expression{
-          branch==master
+          branch==main
         }
       }
       steps{
