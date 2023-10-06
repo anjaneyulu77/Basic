@@ -3,19 +3,23 @@ pipeline{
   tools{
     git 'git'
   }
+  parameters{
+     choice[name: 'version', choices: [1.0, 1.1, 1.2], description: '']
+     booleanparam[name: 'executetests', defaultValue: true, description: '']
+  }
   stages{
     stage('build'){
-      when{
-        expression{
-          branch==main
-        }
-      }
       steps{
         echo 'build application'
       }
     }
     stage('test'){
       steps{
+        when{
+          expression{
+            param.executeTests
+          }
+        }
         echo 'test application'
       }
     }
