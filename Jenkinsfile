@@ -17,7 +17,7 @@ pipeline{
       steps{
         when{
           expression{
-            param.executeTests
+            params.executeTests
           }
         }
         echo 'test application'
