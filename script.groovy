@@ -1,4 +1,4 @@
-def buildapp(){
+def buildApp(){
   echo 'build successfull"
 }
 def testApp(){
