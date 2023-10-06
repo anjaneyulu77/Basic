@@ -6,5 +6,6 @@ def test(){
 }
 def deploy(){
   echo "deploy successfull"
+  echo "deploy version ${params.version}"
 }
 return this
